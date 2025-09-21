@@ -1,0 +1,301 @@
+2025-09-21 13:49:53,738 - rag - INFO - create_weaviate_client:126 - Weaviate client created successfully
+2025-09-21 13:49:53,752 - rag - INFO - lifespan:176 - Starting up RAG API...
+2025-09-21 13:49:53,987 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/meta "HTTP/1.1 200 OK"
+2025-09-21 13:49:54,262 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-09-21 13:49:54,283 - rag - INFO - lifespan:178 - Connected to Weaviate successfully
+2025-09-21 13:49:54,365 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 13:49:54,366 - rag - INFO - lifespan:185 - Weaviate is ready and operational
+2025-09-21 13:50:04,303 - rag - INFO - log_requests:231 - Request: GET /docs from 127.0.0.1
+2025-09-21 13:50:04,304 - rag - INFO - log_requests:241 - Response: 200 in 0.001s
+2025-09-21 13:50:04,436 - rag - INFO - log_requests:231 - Request: GET /openapi.json from 127.0.0.1
+2025-09-21 13:50:04,443 - rag - INFO - log_requests:241 - Response: 200 in 0.007s
+2025-09-21 13:50:16,161 - rag - INFO - log_requests:231 - Request: GET /metrics from 127.0.0.1
+2025-09-21 13:50:16,329 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 13:50:16,330 - rag - INFO - log_requests:241 - Response: 200 in 0.169s
+2025-09-21 13:50:32,261 - rag - INFO - log_requests:231 - Request: GET /debug/collection from 127.0.0.1
+2025-09-21 13:50:32,446 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocument2 "HTTP/1.1 200 OK"
+2025-09-21 13:50:32,448 - rag - INFO - debug_collection:323 - Collection debug info retrieved for: PythonDocument2
+2025-09-21 13:50:32,449 - rag - INFO - log_requests:241 - Response: 200 in 0.188s
+2025-09-21 13:54:34,620 - rag - INFO - lifespan:195 - Shutting down RAG API...
+2025-09-21 13:54:34,621 - rag - INFO - lifespan:197 - Disconnected from Weaviate successfully
+2025-09-21 15:00:04,442 - rag - INFO - create_weaviate_client:126 - Weaviate client created successfully
+2025-09-21 15:00:04,447 - rag - INFO - lifespan:176 - Starting up RAG API...
+2025-09-21 15:00:04,673 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/meta "HTTP/1.1 200 OK"
+2025-09-21 15:00:04,942 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-09-21 15:00:04,975 - rag - INFO - lifespan:178 - Connected to Weaviate successfully
+2025-09-21 15:00:05,056 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:00:05,057 - rag - INFO - lifespan:185 - Weaviate is ready and operational
+2025-09-21 15:00:11,338 - rag - INFO - log_requests:231 - Request: GET /debug/collection from 127.0.0.1
+2025-09-21 15:00:11,527 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocument2 "HTTP/1.1 404 Not Found"
+2025-09-21 15:00:11,528 - rag - ERROR - debug_collection:331 - Collection debug failed: Collection configuration could not be retrieved.! Unexpected status code: 404, with response body: None.
+2025-09-21 15:00:11,528 - rag - INFO - log_requests:241 - Response: 200 in 0.190s
+2025-09-21 15:01:08,401 - rag - INFO - log_requests:231 - Request: POST /answer from 127.0.0.1
+2025-09-21 15:01:08,402 - rag - INFO - answer:346 - Processing query: 'What is Migrating optparse code to argparse...'
+2025-09-21 15:01:08,567 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:01:08,896 - rag - WARNING - answer:383 - Generative search failed, falling back to regular search: Query call with protocol GRPC search failed with message could not find class PythonDocument2 in schema.
+2025-09-21 15:01:09,131 - rag - ERROR - answer:413 - Both generative and regular search failed: Query call with protocol GRPC search failed with message could not find class PythonDocument2 in schema.
+2025-09-21 15:01:09,131 - rag - ERROR - http_exception_handler:261 - HTTP Exception: 500 - Search functionality is currently unavailable
+2025-09-21 15:01:09,131 - rag - ERROR - log_requests:251 - Request failed: POST /answer after 0.730s - Object of type datetime is not JSON serializable
+2025-09-21 15:01:09,142 - rag - ERROR - general_exception_handler:274 - Unhandled exception: Object of type datetime is not JSON serializable
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 183, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/backend/rag.py", line 237, in log_requests
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    |     raise app_exc
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/trustedhost.py", line 51, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 78, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 59, in wrapped_app
+    |     response = await handler(conn, exc)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/backend/rag.py", line 262, in http_exception_handler
+    |     return JSONResponse(
+    |            ^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 190, in __init__
+    |     super().__init__(content, status_code, headers, media_type, background)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 47, in __init__
+    |     self.body = self.render(content)
+    |                 ^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 193, in render
+    |     return json.dumps(
+    |            ^^^^^^^^^^^
+    |   File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    |     **kw).encode(obj)
+    |           ^^^^^^^^^^^
+    |   File "/usr/lib/python3.12/json/encoder.py", line 200, in encode
+    |     chunks = self.iterencode(o, _one_shot=True)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/usr/lib/python3.12/json/encoder.py", line 258, in iterencode
+    |     return _iterencode(o, 0)
+    |            ^^^^^^^^^^^^^^^^^
+    |   File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    |     raise TypeError(f'Object of type {o.__class__.__name__} '
+    | TypeError: Object of type datetime is not JSON serializable
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/backend/rag.py", line 237, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    raise app_exc
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/trustedhost.py", line 51, in __call__
+    await self.app(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 59, in wrapped_app
+    response = await handler(conn, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/backend/rag.py", line 262, in http_exception_handler
+    return JSONResponse(
+           ^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 193, in render
+    return json.dumps(
+           ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+
+2025-09-21 15:03:29,975 - rag - INFO - lifespan:195 - Shutting down RAG API...
+2025-09-21 15:03:29,976 - rag - INFO - lifespan:197 - Disconnected from Weaviate successfully
+2025-09-21 15:03:30,739 - rag - INFO - create_weaviate_client:128 - Weaviate client created successfully
+2025-09-21 15:03:30,743 - rag - INFO - lifespan:198 - Starting up RAG API...
+2025-09-21 15:03:30,957 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/meta "HTTP/1.1 200 OK"
+2025-09-21 15:03:31,408 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-09-21 15:03:31,459 - rag - INFO - lifespan:200 - Connected to Weaviate successfully
+2025-09-21 15:03:31,539 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:03:31,540 - rag - INFO - lifespan:207 - Weaviate is ready and operational
+2025-09-21 15:03:31,620 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocument2 "HTTP/1.1 404 Not Found"
+2025-09-21 15:03:31,620 - rag - WARNING - check_collection_exists:180 - Collection PythonDocument2 does not exist or is not accessible: Collection configuration could not be retrieved.! Unexpected status code: 404, with response body: None.
+2025-09-21 15:03:31,621 - rag - WARNING - lifespan:212 - Collection 'PythonDocument2' does not exist
+2025-09-21 15:03:31,705 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema "HTTP/1.1 200 OK"
+2025-09-21 15:03:31,707 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:03:31,707 - rag - INFO - lifespan:214 - Available collections: []
+2025-09-21 15:03:43,641 - rag - INFO - log_requests:260 - Request: GET /docs from 127.0.0.1
+2025-09-21 15:03:43,641 - rag - INFO - log_requests:270 - Response: 200 in 0.001s
+2025-09-21 15:03:43,717 - rag - INFO - log_requests:260 - Request: GET /openapi.json from 127.0.0.1
+2025-09-21 15:03:43,728 - rag - INFO - log_requests:270 - Response: 200 in 0.011s
+2025-09-21 15:03:48,709 - rag - INFO - log_requests:260 - Request: POST /answer from 127.0.0.1
+2025-09-21 15:03:48,709 - rag - INFO - answer:403 - Processing query: 'What is Python?...'
+2025-09-21 15:03:48,882 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:03:48,960 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocument2 "HTTP/1.1 404 Not Found"
+2025-09-21 15:03:48,960 - rag - WARNING - check_collection_exists:180 - Collection PythonDocument2 does not exist or is not accessible: Collection configuration could not be retrieved.! Unexpected status code: 404, with response body: None.
+2025-09-21 15:03:49,047 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema "HTTP/1.1 200 OK"
+2025-09-21 15:03:49,052 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:03:49,053 - rag - ERROR - http_exception_handler:290 - HTTP Exception: 404 - Collection 'PythonDocument2' not found. Available collections: []
+2025-09-21 15:03:49,053 - rag - INFO - log_requests:270 - Response: 404 in 0.344s
+2025-09-21 15:04:06,679 - rag - INFO - log_requests:260 - Request: GET /collections from 127.0.0.1
+2025-09-21 15:04:06,866 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema "HTTP/1.1 200 OK"
+2025-09-21 15:04:06,870 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:04:06,942 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocument2 "HTTP/1.1 404 Not Found"
+2025-09-21 15:04:06,943 - rag - WARNING - check_collection_exists:180 - Collection PythonDocument2 does not exist or is not accessible: Collection configuration could not be retrieved.! Unexpected status code: 404, with response body: None.
+2025-09-21 15:04:06,943 - rag - INFO - log_requests:270 - Response: 200 in 0.264s
+2025-09-21 15:06:02,772 - rag - INFO - lifespan:224 - Shutting down RAG API...
+2025-09-21 15:06:02,773 - rag - INFO - lifespan:226 - Disconnected from Weaviate successfully
+2025-09-21 15:06:03,481 - rag - INFO - create_weaviate_client:128 - Weaviate client created successfully
+2025-09-21 15:06:03,491 - rag - INFO - lifespan:198 - Starting up RAG API...
+2025-09-21 15:06:03,695 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/meta "HTTP/1.1 200 OK"
+2025-09-21 15:06:03,932 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-09-21 15:06:03,966 - rag - INFO - lifespan:200 - Connected to Weaviate successfully
+2025-09-21 15:06:04,044 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:06:04,045 - rag - INFO - lifespan:207 - Weaviate is ready and operational
+2025-09-21 15:06:04,124 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocs "HTTP/1.1 200 OK"
+2025-09-21 15:06:16,940 - rag - INFO - log_requests:260 - Request: GET /docs from 127.0.0.1
+2025-09-21 15:06:16,941 - rag - INFO - log_requests:270 - Response: 200 in 0.001s
+2025-09-21 15:06:17,017 - rag - INFO - log_requests:260 - Request: GET /openapi.json from 127.0.0.1
+2025-09-21 15:06:17,021 - rag - INFO - log_requests:270 - Response: 200 in 0.004s
+2025-09-21 15:06:21,114 - rag - INFO - log_requests:260 - Request: GET /collections from 127.0.0.1
+2025-09-21 15:06:21,289 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema "HTTP/1.1 200 OK"
+2025-09-21 15:06:21,291 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:06:21,373 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocs "HTTP/1.1 200 OK"
+2025-09-21 15:06:21,375 - rag - INFO - log_requests:270 - Response: 200 in 0.261s
+2025-09-21 15:06:48,798 - rag - INFO - log_requests:260 - Request: POST /answer from 127.0.0.1
+2025-09-21 15:06:48,798 - rag - INFO - answer:403 - Processing query: 'What is Migrating optparse code to argparse?...'
+2025-09-21 15:06:48,966 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:06:49,052 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocs "HTTP/1.1 200 OK"
+2025-09-21 15:06:49,594 - rag - WARNING - answer:449 - Generative search failed, falling back to regular search: Query call with protocol GRPC search failed with message searcher: hybrid: extend: extend generate: client not found, empty provider.
+2025-09-21 15:06:49,921 - rag - ERROR - answer:479 - Both generative and regular search failed: 1 validation error for SearchResult
+confidence
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-21 15:06:49,922 - rag - ERROR - http_exception_handler:290 - HTTP Exception: 500 - Search functionality is currently unavailable
+2025-09-21 15:06:49,922 - rag - INFO - log_requests:270 - Response: 500 in 1.125s
+2025-09-21 15:09:04,573 - rag - INFO - lifespan:224 - Shutting down RAG API...
+2025-09-21 15:09:04,573 - rag - INFO - lifespan:226 - Disconnected from Weaviate successfully
+2025-09-21 15:09:05,274 - rag - INFO - create_weaviate_client:128 - Weaviate client created successfully
+2025-09-21 15:09:05,279 - rag - INFO - lifespan:198 - Starting up RAG API...
+2025-09-21 15:09:05,507 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/meta "HTTP/1.1 200 OK"
+2025-09-21 15:09:05,766 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-09-21 15:09:05,800 - rag - INFO - lifespan:200 - Connected to Weaviate successfully
+2025-09-21 15:09:05,882 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:09:05,882 - rag - INFO - lifespan:207 - Weaviate is ready and operational
+2025-09-21 15:09:05,967 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocument2 "HTTP/1.1 404 Not Found"
+2025-09-21 15:09:05,967 - rag - WARNING - check_collection_exists:180 - Collection PythonDocument2 does not exist or is not accessible: Collection configuration could not be retrieved.! Unexpected status code: 404, with response body: None.
+2025-09-21 15:09:05,967 - rag - WARNING - lifespan:212 - Collection 'PythonDocument2' does not exist
+2025-09-21 15:09:06,055 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema "HTTP/1.1 200 OK"
+2025-09-21 15:09:06,060 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:09:06,061 - rag - INFO - lifespan:214 - Available collections: []
+2025-09-21 15:09:16,494 - rag - INFO - lifespan:224 - Shutting down RAG API...
+2025-09-21 15:09:16,498 - rag - INFO - lifespan:226 - Disconnected from Weaviate successfully
+2025-09-21 15:09:17,193 - rag - INFO - create_weaviate_client:128 - Weaviate client created successfully
+2025-09-21 15:09:17,198 - rag - INFO - lifespan:198 - Starting up RAG API...
+2025-09-21 15:09:17,425 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/meta "HTTP/1.1 200 OK"
+2025-09-21 15:09:17,666 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-09-21 15:09:17,693 - rag - INFO - lifespan:200 - Connected to Weaviate successfully
+2025-09-21 15:09:17,770 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:09:17,771 - rag - INFO - lifespan:207 - Weaviate is ready and operational
+2025-09-21 15:09:17,850 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocument2 "HTTP/1.1 404 Not Found"
+2025-09-21 15:09:17,852 - rag - WARNING - check_collection_exists:180 - Collection PythonDocument2 does not exist or is not accessible: Collection configuration could not be retrieved.! Unexpected status code: 404, with response body: None.
+2025-09-21 15:09:17,852 - rag - WARNING - lifespan:212 - Collection 'PythonDocument2' does not exist
+2025-09-21 15:09:17,935 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema "HTTP/1.1 200 OK"
+2025-09-21 15:09:17,944 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:09:17,944 - rag - INFO - lifespan:214 - Available collections: []
+2025-09-21 15:09:40,513 - rag - INFO - lifespan:224 - Shutting down RAG API...
+2025-09-21 15:09:40,514 - rag - INFO - lifespan:226 - Disconnected from Weaviate successfully
+2025-09-21 15:09:41,198 - rag - INFO - create_weaviate_client:128 - Weaviate client created successfully
+2025-09-21 15:09:41,202 - rag - INFO - lifespan:198 - Starting up RAG API...
+2025-09-21 15:09:41,437 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/meta "HTTP/1.1 200 OK"
+2025-09-21 15:09:41,676 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-09-21 15:09:41,717 - rag - INFO - lifespan:200 - Connected to Weaviate successfully
+2025-09-21 15:09:41,803 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:09:41,804 - rag - INFO - lifespan:207 - Weaviate is ready and operational
+2025-09-21 15:09:41,890 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocs "HTTP/1.1 200 OK"
+2025-09-21 15:09:52,185 - rag - INFO - log_requests:260 - Request: POST /answer from 127.0.0.1
+2025-09-21 15:09:52,186 - rag - INFO - answer:403 - Processing query: 'What is Migrating optparse code to argparse?...'
+2025-09-21 15:09:52,354 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:09:52,439 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocs "HTTP/1.1 200 OK"
+2025-09-21 15:09:53,465 - rag - WARNING - answer:459 - Generative search failed, falling back to regular search: Query call with protocol GRPC search failed with message searcher: hybrid: extend: extend generate: client not found, empty provider.
+2025-09-21 15:09:53,796 - rag - INFO - answer:496 - Regular search completed with 1 results
+2025-09-21 15:09:53,796 - rag - INFO - answer:517 - Query completed in 1610.12ms with 1 results
+2025-09-21 15:09:53,797 - rag - INFO - log_requests:270 - Response: 200 in 1.611s
+2025-09-21 15:10:47,797 - rag - INFO - log_requests:260 - Request: GET /metrics from 127.0.0.1
+2025-09-21 15:10:47,984 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-09-21 15:10:48,075 - httpx - INFO - _send_single_request:1740 - HTTP Request: GET https://zg0jpid3qqkztv81ago3bq.c0.asia-southeast1.gcp.weaviate.cloud/v1/schema/PythonDocs "HTTP/1.1 200 OK"
+2025-09-21 15:10:48,078 - rag - INFO - log_requests:270 - Response: 200 in 0.281s
+2025-09-21 15:11:10,361 - rag - INFO - lifespan:224 - Shutting down RAG API...
+2025-09-21 15:11:10,362 - rag - INFO - lifespan:226 - Disconnected from Weaviate successfully

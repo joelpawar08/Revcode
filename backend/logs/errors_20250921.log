@@ -1,0 +1,161 @@
+2025-09-21 15:00:11,528 - rag - ERROR - debug_collection:331 - Collection debug failed: Collection configuration could not be retrieved.! Unexpected status code: 404, with response body: None.
+2025-09-21 15:01:09,131 - rag - ERROR - answer:413 - Both generative and regular search failed: Query call with protocol GRPC search failed with message could not find class PythonDocument2 in schema.
+2025-09-21 15:01:09,131 - rag - ERROR - http_exception_handler:261 - HTTP Exception: 500 - Search functionality is currently unavailable
+2025-09-21 15:01:09,131 - rag - ERROR - log_requests:251 - Request failed: POST /answer after 0.730s - Object of type datetime is not JSON serializable
+2025-09-21 15:01:09,142 - rag - ERROR - general_exception_handler:274 - Unhandled exception: Object of type datetime is not JSON serializable
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 183, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/backend/rag.py", line 237, in log_requests
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    |     raise app_exc
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/trustedhost.py", line 51, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 78, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 59, in wrapped_app
+    |     response = await handler(conn, exc)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/backend/rag.py", line 262, in http_exception_handler
+    |     return JSONResponse(
+    |            ^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 190, in __init__
+    |     super().__init__(content, status_code, headers, media_type, background)
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 47, in __init__
+    |     self.body = self.render(content)
+    |                 ^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 193, in render
+    |     return json.dumps(
+    |            ^^^^^^^^^^^
+    |   File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    |     **kw).encode(obj)
+    |           ^^^^^^^^^^^
+    |   File "/usr/lib/python3.12/json/encoder.py", line 200, in encode
+    |     chunks = self.iterencode(o, _one_shot=True)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/usr/lib/python3.12/json/encoder.py", line 258, in iterencode
+    |     return _iterencode(o, 0)
+    |            ^^^^^^^^^^^^^^^^^
+    |   File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    |     raise TypeError(f'Object of type {o.__class__.__name__} '
+    | TypeError: Object of type datetime is not JSON serializable
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 182, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 184, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/backend/rag.py", line 237, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 159, in call_next
+    raise app_exc
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/trustedhost.py", line 51, in __call__
+    await self.app(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/_exception_handler.py", line 59, in wrapped_app
+    response = await handler(conn, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/backend/rag.py", line 262, in http_exception_handler
+    return JSONResponse(
+           ^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/lenovo/Desktop/OtherOpenSource/Revcode/revcode/lib/python3.12/site-packages/starlette/responses.py", line 193, in render
+    return json.dumps(
+           ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+
+2025-09-21 15:03:31,707 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:03:49,052 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:03:49,053 - rag - ERROR - http_exception_handler:290 - HTTP Exception: 404 - Collection 'PythonDocument2' not found. Available collections: []
+2025-09-21 15:04:06,870 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:06:21,291 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:06:49,921 - rag - ERROR - answer:479 - Both generative and regular search failed: 1 validation error for SearchResult
+confidence
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/float_type
+2025-09-21 15:06:49,922 - rag - ERROR - http_exception_handler:290 - HTTP Exception: 500 - Search functionality is currently unavailable
+2025-09-21 15:09:06,060 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
+2025-09-21 15:09:17,944 - rag - ERROR - list_available_collections:189 - Failed to list collections: 'str' object has no attribute 'name'
