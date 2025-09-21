@@ -32,7 +32,7 @@ except Exception as e:
     exit(1)
 
 # --- Collection creation ---
-COLLECTION_NAME = "PythonDocument2"
+COLLECTION_NAME = "PythonDocs"
 
 if client.collections.exists(COLLECTION_NAME):
     logger.info(f"Collection '{COLLECTION_NAME}' already exists. Deleting for a fresh start.")

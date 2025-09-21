@@ -1,0 +1,9 @@
+weaviate-client>=4.9.5
+pypdf
+python-dotenv
+fastapi
+uvicorn 
+pydantic
+cohere
+gunicorn
+python-multipart
